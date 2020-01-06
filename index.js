@@ -4,7 +4,7 @@ var rpio = require('rpio');
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory("homebridge-relays", "Relay", RelayAccessory);
+  homebridge.registerAccessory("homebridge-lightbulb-gpio", "LightBulbGpio", RelayAccessory);
 }
 
 function RelayAccessory(log, config) {
@@ -65,7 +65,7 @@ RelayAccessory.prototype.gpioVal = function(val) {
 }
 
 RelayAccessory.prototype.getServices = function() {
-  var relayService = new Service.Switch(this.name);
+  var relayService = new Service.Lightbulb(this.name);
   relayService.getCharacteristic(Characteristic.On)
     .on('get', this.getRelayStatus.bind(this))
     .on('set', this.setRelayOn.bind(this));
