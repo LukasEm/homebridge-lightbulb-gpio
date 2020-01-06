@@ -23,7 +23,7 @@ The hardware is quite simple to construct.
     {
       "accessory": "LightBulbGpio",
       "name": "Living room light",
-      "pin": 11
+      "pin": 11,
       "invert": false,
       "default_state": false
     }
