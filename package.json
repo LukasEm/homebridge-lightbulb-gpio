@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-relays",
+  "name": "homebridge-lightbulb-gpio",
   "version": "0.0.1",
-  "description": "Raspberry Pi relay plugin for homebridge: https://github.com/nfarina/homebridge",
+  "description": "Fast plugin LightBulb plugin for Homebridge + Raspberry Pi GPIO",
   "license": "MIT",
   "keywords": [
     "homebridge-plugin"
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Paulraita/homebridge-relays.git"
+    "url": "git://github.com/home-things/homebridge-lightbulb-gpio.git"
   },
   "dependencies": {
     "request": "^2.65.0",
