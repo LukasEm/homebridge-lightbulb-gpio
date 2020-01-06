@@ -1,6 +1,6 @@
 {
   "name": "homebridge-lightbulb-gpio",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Fast plugin LightBulb plugin for Homebridge + Raspberry Pi GPIO",
   "license": "MIT",
   "keywords": [
