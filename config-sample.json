@@ -1,36 +1,20 @@
 {
   "bridge": {
-    "name": "RelayServer",
-    "username": "CC:22:3D:E3:CE:FA",
-    "port": 51826,
-    "pin": "031-45-155"
+    "name": "Living room hub",
+    "username": "XX:XX:XX:XX:XX:XX",
+    "port": 00000,
+    "pin": "000-00-000"
   },
 
-  "description": "4 Channel Relay",
+  "description": "Living room",
 
   "accessories": [
     {
-      "accessory": "Relay",
-      "name": "Relay-1",
+      "accessory": "LightBulbGpio",
+      "name": "Main light",
       "pin": 11,
-      "invert": true,
-      "default_state": false,
-      "duration_ms": 1000
-    },
-    {
-      "accessory": "Relay",
-      "name": "Relay-2",
-      "pin": 13
-    },
-    {
-      "accessory": "Relay",
-      "name": "Relay-3",
-      "pin": 15
-    },
-    {
-      "accessory": "Relay",
-      "name": "Relay-4",
-      "pin": 29
+      "invert": false,
+      "default_state": false
     }
   ],
 
