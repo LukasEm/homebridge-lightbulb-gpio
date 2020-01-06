@@ -6,60 +6,32 @@ Controls 4 channel relays with a Raspberry Pi using HomeKit.
 
 The hardware is quite simple to construct.
 
-1. Raspberry Pi 3 Model B
-2. 4-relay module pins are connected to 4 GPIO pins (GPIO-17, 27, 22, 05). 
-
-The raspberry pi can then control the state of the relays
+1. Any Raspberry Pi
+2. Relay connected to light bulb and rpi gpio
 
 # Installation
 
-1. Install homebridge using: `sudo npm install --unsafe-perm -g homebridge`
-2. Install this plugin using: `sudo npm install -g --unsafe-perm homebridge-relays`
+1. Install homebridge using: `npm install -g homebridge`
+2. Install this plugin using: `npm install -g homebridge-lightbulb-gpio`
 3. Update your configuration file. See `config-sample.json` in this repository for a sample.
 
 # Sample Configuration
 
+```json
+{
+  "accessories": [
     {
-      "bridge": {
-        "name": "RelayServer",
-        "username": "CC:22:3D:E3:CE:FA",
-        "port": 51826,
-        "pin": "031-45-155"
-      },
-
-      "description": "4 Channel Relay",
-
-      "accessories": [
-        {
-          "accessory": "Relay",
-          "name": "Relay-1",
-          "pin": 11
-          "invert": true,
-          "default_state": false,
-          "duration": 1000
-        },
-        {
-          "accessory": "Relay",
-          "name": "Relay-2",
-          "pin": 13
-          "invert": false,
-          "default_state": false,
-          "duration": 3600000
-        },
-        {
-          "accessory": "Relay",
-          "name": "Relay-3",
-          "pin": 15
-        },
-        {
-          "accessory": "Relay",
-          "name": "Relay-4",
-          "pin": 29
-        }
-      ],
-
-      "platforms": []
+      "accessory": "LightBulbGpio",
+      "name": "Living room light",
+      "pin": 11
+      "invert": false,
+      "default_state": false
     }
+  ],
+
+  "platforms": []
+}
+```
 
 # Accessory Configuration Options
 
